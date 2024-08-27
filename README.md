@@ -37,3 +37,11 @@ app.get("/", (req, res) => {
 ```
 
 You can generate a suitable string for `secret` using `openssl rand -hex 32` on the command line.
+
+Load .env:
+
+```javascript
+source and import environment variables
+require('dotenv').config({ path: '.okta.env' })
+const { ORG_URL, CLIENT_ID, CLIENT_SECRET } = process.env;
+```
