@@ -35,3 +35,5 @@ app.get("/", (req, res) => {
   res.send(req.oidc.isAuthenticated() ? "Logged in" : "Logged out");
 });
 ```
+
+You can generate a suitable string for `secret` using `openssl rand -hex 32` on the command line.
